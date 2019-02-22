@@ -34,7 +34,7 @@ var queryType = new Graphql.GraphQLObjectType({
       }
     },
     //요청 타입 2 : 모든 과자의 정보
-    allSnacks : {
+    snacks : {
       type: new Graphql.GraphQLList(snackType),
       resolve: function(obj, args, context, info) {
         return dummyDatabase;
