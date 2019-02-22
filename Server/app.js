@@ -19,7 +19,7 @@ var queryType = new Graphql.GraphQLObjectType({
   name: "Query",
   fields: {
     //요청 타입 1 : id를 argument로 받아 조건 매칭
-    snacks : {
+    snack : {
       type: snackType,
       args: {
         id: { type: Graphql.GraphQLInt }
@@ -52,7 +52,7 @@ app.use(
   "/graphql", //라우트 경로 지정
   graphqlHTTP({
     schema: schema,
-    graphiql: true
+    graphiql: true //검색도구 노출 여부
   })
 );
 
